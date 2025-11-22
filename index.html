@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scramble Words Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Scramble Words Game</h1>
+        
+        <div class="game-stats">
+            <div class="stat">Score: <span id="score">0</span></div>
+            <div class="stat">Lives: <span id="lives">3</span></div>
+            <div class="stat">Level: <span id="level">1</span></div>
+        </div>
+
+        <div class="game-area">
+            <div class="clue-section">
+                <h3>Clue:</h3>
+                <div id="clue" class="clue-text"></div>
+            </div>
+
+            <div class="scrambled-word">
+                <h3>Scrambled Word:</h3>
+                <div id="scrambled-word" class="word-display"></div>
+            </div>
+
+            <div class="input-section">
+                <input type="text" id="user-input" placeholder="Type your answer here..." maxlength="20">
+                <button id="submit-btn" class="game-btn">Submit</button>
+                <button id="hint-btn" class="game-btn hint">Hint</button>
+                <button id="skip-btn" class="game-btn skip">Skip</button>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <div class="progress">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Progress: <span id="progress-text">0/10</span></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn" class="control-btn">New Game</button>
+            <button id="sound-btn" class="control-btn">🔊 Sound On</button>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="background-music" loop preload="auto">
+        <source src="assets/sounds/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="win-sound" preload="auto">
+        <source src="assets/sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="lose-sound" preload="auto">
+        <source src="assets/sounds/lose.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
